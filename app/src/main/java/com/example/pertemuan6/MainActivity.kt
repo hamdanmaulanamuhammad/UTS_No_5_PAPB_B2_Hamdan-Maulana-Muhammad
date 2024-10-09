@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val adapterKehadiran = resources.getStringArray(R.array.keterangan)
+        val adapterKehadiran = resources.getStringArray(R.array.keterangan) //menambahkan ini
 
         with(binding){
 //            Get Array
@@ -32,10 +32,10 @@ class MainActivity : AppCompatActivity() {
             var selectedDate = "${_tempCalendar.get(Calendar.DAY_OF_MONTH)} ${monthList[_tempCalendar.get(Calendar.MONTH)]} ${_tempCalendar.get(Calendar.YEAR)}"
 
 
-//
+//Kehadiran Dropdown=======================================
             val adapter = ArrayAdapter(this@MainActivity,
                 android.R.layout.simple_spinner_dropdown_item, adapterKehadiran)
-            kehadiranSpinner.adapter = adapter
+            kehadiranSpinner.adapter = adapter //modifikasi ini
 
 //          Selected Kehadiran
             kehadiranSpinner.onItemSelectedListener =
@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
 
     }
 }
